@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+    <span>Contact Management</span>
+    <span class="example-spacer"></span>
+    <button *ngIf="isLoggedin==false" id="register" mat-raised-button color="warn" style="margin-right: 8px;" (click)="openDialog()">Register</button>
+    <button *ngIf="isLoggedin==false" id="login" mat-raised-button (click)="openLogin()">Login</button>
+    <button *ngIf="isLoggedin==true" id="logout" mat-raised-button (click)="logout()">Logout</button>
+    <button *ngIf="isLoggedin==true" id="add" mat-raised-button (click)="addContact()" color="warn" style="margin-left: 10px;">Add Contact</button>
+
+  </mat-toolbar>

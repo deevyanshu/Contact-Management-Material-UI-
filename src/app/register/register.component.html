@@ -1,0 +1,24 @@
+<h1 class="text-center" mat-dialog-title>Regiter here</h1>
+<span class="alert-danger" style="font-style: italic; font-size: 16px; display: none;" id="error">{{errorMes}}</span>
+<div mat-dialog-content>
+    <form [formGroup]="productForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input [(ngModel)]="user.name" formControlName="name" matInput placeholder="Enter name">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input [(ngModel)]="user.email" formControlName="email" matInput placeholder="Enter email">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>password</mat-label>
+            <input [(ngModel)]="user.password" formControlName="password" matInput placeholder="Enter password">
+          </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>close</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="register()">Register</button>
+  </div>

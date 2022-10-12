@@ -1,0 +1,21 @@
+<h1 class="text-center" mat-dialog-title>Login Here</h1>
+<div mat-dialog-content>
+    <div class="text-center">
+    <span id="loginerror" style="display: none; font-style: italic; color: red;">{{errormes}}</span>
+    </div>
+    <form [formGroup]="productForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input [(ngModel)]="username" formControlName="email" matInput placeholder="Enter email" name="username" id="username">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>password</mat-label>
+            <input [(ngModel)]="password" formControlName="password" matInput placeholder="Enter password" type="password" name="password" id="password">
+          </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>close</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="handleLogin()">Login</button>
+  </div>
